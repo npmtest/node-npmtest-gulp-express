@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-gulp-express/gulp-express/index.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-gulp-express/node_modules/gulp-express/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-gulp-express">npmtest-gulp-express (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-express/gulp-express/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-express/node_modules/gulp-express/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">12.73% <small>(7 / 55)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-gulp-express/gulp-express/</a> » index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-gulp-express/node_modules/gulp-express/</a> &#187; index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -543,29 +545,29 @@ module.exports = (function () {
     config.options.env.server_ENV = 'development';
 &nbsp;
     var callback = {
-        processExit: <span class="fstat-no" title="function not covered">function (code, sig) {</span>
-<span class="cstat-no" title="statement not covered">            debug(info('Main process exited with [code =&gt; %s | sig =&gt; %s]'), code, sig);</span>
-<span class="cstat-no" title="statement not covered">            server &amp;&amp; server.kill();</span>
+        processExit: <span class="fstat-no" title="function not covered" >function (code, sig) {</span>
+<span class="cstat-no" title="statement not covered" >            debug(info('Main process exited with [code =&gt; %s | sig =&gt; %s]'), code, sig);</span>
+<span class="cstat-no" title="statement not covered" >            server &amp;&amp; server.kill();</span>
         },
 &nbsp;
-        serverExit: <span class="fstat-no" title="function not covered">function (code, sig) {</span>
-<span class="cstat-no" title="statement not covered">            debug(info('server process exited with [code =&gt; %s | sig =&gt; %s]'), code, sig);</span>
-<span class="cstat-no" title="statement not covered">            if(sig !== 'SIGKILL'){</span>
+        serverExit: <span class="fstat-no" title="function not covered" >function (code, sig) {</span>
+<span class="cstat-no" title="statement not covered" >            debug(info('server process exited with [code =&gt; %s | sig =&gt; %s]'), code, sig);</span>
+<span class="cstat-no" title="statement not covered" >            if(sig !== 'SIGKILL'){</span>
                 //server stopped unexpectedly
-<span class="cstat-no" title="statement not covered">                process.exit(0);</span>
+<span class="cstat-no" title="statement not covered" >                process.exit(0);</span>
             }
         },
 &nbsp;
-        lrServerReady: <span class="fstat-no" title="function not covered">function () {</span>
-<span class="cstat-no" title="statement not covered">            console.log(info('livereload[tiny-lr] listening on %s ...'), config.livereload.port);</span>
+        lrServerReady: <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >            console.log(info('livereload[tiny-lr] listening on %s ...'), config.livereload.port);</span>
         },
 &nbsp;
-        serverLog: <span class="fstat-no" title="function not covered">function (data) {</span>
-<span class="cstat-no" title="statement not covered">            console.log(info(data.trim()));</span>
+        serverLog: <span class="fstat-no" title="function not covered" >function (data) {</span>
+<span class="cstat-no" title="statement not covered" >            console.log(info(data.trim()));</span>
         },
 &nbsp;
-        serverError: <span class="fstat-no" title="function not covered">function (data) {</span>
-<span class="cstat-no" title="statement not covered">            console.log(error(data.trim()));</span>
+        serverError: <span class="fstat-no" title="function not covered" >function (data) {</span>
+<span class="cstat-no" title="statement not covered" >            console.log(error(data.trim()));</span>
         }
     };
 &nbsp;
@@ -579,65 +581,65 @@ module.exports = (function () {
          * @param {object}                  [options]
          * @param {boolean|number|object}   [livereload]
          */
-        run: <span class="fstat-no" title="function not covered">function (args, options, livereload) {</span>
+        run: <span class="fstat-no" title="function not covered" >function (args, options, livereload) {</span>
             //deal with args
-<span class="cstat-no" title="statement not covered">            if(util.isArray(args) &amp;&amp; args.length){</span>
-<span class="cstat-no" title="statement not covered">                config.args = args;</span>
+<span class="cstat-no" title="statement not covered" >            if(util.isArray(args) &amp;&amp; args.length){</span>
+<span class="cstat-no" title="statement not covered" >                config.args = args;</span>
             }
 &nbsp;
             //deal with options
-<span class="cstat-no" title="statement not covered">            config.options = merge(config.options, options || {});</span>
+<span class="cstat-no" title="statement not covered" >            config.options = merge(config.options, options || {});</span>
 &nbsp;
             //deal with livereload
-<span class="cstat-no" title="statement not covered">            if(livereload === false){   //livereload disabled</span>
-<span class="cstat-no" title="statement not covered">                config.livereload = false;</span>
-            }else <span class="cstat-no" title="statement not covered">if(livereload){</span>
-<span class="cstat-no" title="statement not covered">                if(typeof livereload === 'object'){</span>
-<span class="cstat-no" title="statement not covered">                    config.livereload = livereload;</span>
+<span class="cstat-no" title="statement not covered" >            if(livereload === false){   //livereload disabled</span>
+<span class="cstat-no" title="statement not covered" >                config.livereload = false;</span>
+            }else <span class="cstat-no" title="statement not covered" >if(livereload){</span>
+<span class="cstat-no" title="statement not covered" >                if(typeof livereload === 'object'){</span>
+<span class="cstat-no" title="statement not covered" >                    config.livereload = livereload;</span>
                 }else{
-<span class="cstat-no" title="statement not covered">                    config.livereload.port = livereload;</span>
+<span class="cstat-no" title="statement not covered" >                    config.livereload.port = livereload;</span>
                 }
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered">            if (server) { // server already running</span>
-<span class="cstat-no" title="statement not covered">                debug(info('kill server'));</span>
-<span class="cstat-no" title="statement not covered">                server.kill('SIGKILL');</span>
+<span class="cstat-no" title="statement not covered" >            if (server) { // server already running</span>
+<span class="cstat-no" title="statement not covered" >                debug(info('kill server'));</span>
+<span class="cstat-no" title="statement not covered" >                server.kill('SIGKILL');</span>
                 //server.removeListener('exit', callback.serverExit);
-<span class="cstat-no" title="statement not covered">                server = undefined;</span>
+<span class="cstat-no" title="statement not covered" >                server = undefined;</span>
             } else {
-<span class="cstat-no" title="statement not covered">                if(config.livereload){</span>
-<span class="cstat-no" title="statement not covered">                    lr = tinylr(config.livereload);</span>
-<span class="cstat-no" title="statement not covered">                    lr.listen(config.livereload.port, callback.lrServerReady);</span>
+<span class="cstat-no" title="statement not covered" >                if(config.livereload){</span>
+<span class="cstat-no" title="statement not covered" >                    lr = tinylr(config.livereload);</span>
+<span class="cstat-no" title="statement not covered" >                    lr.listen(config.livereload.port, callback.lrServerReady);</span>
                 }
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered">            server = spawn('node', config.args, config.options);</span>
-<span class="cstat-no" title="statement not covered">            server.stdout.setEncoding('utf8');</span>
-<span class="cstat-no" title="statement not covered">            server.stderr.setEncoding('utf8');</span>
+<span class="cstat-no" title="statement not covered" >            server = spawn('node', config.args, config.options);</span>
+<span class="cstat-no" title="statement not covered" >            server.stdout.setEncoding('utf8');</span>
+<span class="cstat-no" title="statement not covered" >            server.stderr.setEncoding('utf8');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">            server.stdout.on('data', callback.serverLog);</span>
-<span class="cstat-no" title="statement not covered">            server.stderr.on('data', callback.serverError);</span>
-<span class="cstat-no" title="statement not covered">            server.once('exit', callback.serverExit);</span>
+<span class="cstat-no" title="statement not covered" >            server.stdout.on('data', callback.serverLog);</span>
+<span class="cstat-no" title="statement not covered" >            server.stderr.on('data', callback.serverError);</span>
+<span class="cstat-no" title="statement not covered" >            server.once('exit', callback.serverExit);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">            process.listeners('exit') || process.once('exit', callback.processExit);</span>
+<span class="cstat-no" title="statement not covered" >            process.listeners('exit') || process.once('exit', callback.processExit);</span>
         },
 &nbsp;
         /**
          * Stop the server child process and the livereload server
          */
-        stop: <span class="fstat-no" title="function not covered">function () {</span>
-<span class="cstat-no" title="statement not covered">            if (server) {</span>
-<span class="cstat-no" title="statement not covered">                debug(info('kill server'));</span>
+        stop: <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >            if (server) {</span>
+<span class="cstat-no" title="statement not covered" >                debug(info('kill server'));</span>
                 //use SIGHUP instead of SIGKILL, see issue #34
-<span class="cstat-no" title="statement not covered">                server.kill('SIGKILL');</span>
+<span class="cstat-no" title="statement not covered" >                server.kill('SIGKILL');</span>
                 //server.removeListener('exit', callback.serverExit);
-<span class="cstat-no" title="statement not covered">                server = undefined;</span>
+<span class="cstat-no" title="statement not covered" >                server = undefined;</span>
             }
-<span class="cstat-no" title="statement not covered">            if(lr){</span>
-<span class="cstat-no" title="statement not covered">                debug(info('close livereload server'));</span>
-<span class="cstat-no" title="statement not covered">                lr.close();</span>
+<span class="cstat-no" title="statement not covered" >            if(lr){</span>
+<span class="cstat-no" title="statement not covered" >                debug(info('close livereload server'));</span>
+<span class="cstat-no" title="statement not covered" >                lr.close();</span>
                 //TODO how to stop tiny-lr from hanging the terminal
-<span class="cstat-no" title="statement not covered">                lr = undefined;</span>
+<span class="cstat-no" title="statement not covered" >                lr = undefined;</span>
             }
         },
 &nbsp;
@@ -646,28 +648,27 @@ module.exports = (function () {
          * @param event
          * @returns {*}
          */
-        notify: <span class="fstat-no" title="function not covered">function (event) {</span>
-<span class="cstat-no" title="statement not covered">            if(event &amp;&amp; event.path){</span>
-<span class="cstat-no" title="statement not covered">                var filepath = path.relative(__dirname, event.path);</span>
-<span class="cstat-no" title="statement not covered">                debug(info('file(s) changed: %s'), event.path);</span>
-<span class="cstat-no" title="statement not covered">                lr.changed({body: {files: [filepath]}});</span>
+        notify: <span class="fstat-no" title="function not covered" >function (event) {</span>
+<span class="cstat-no" title="statement not covered" >            if(event &amp;&amp; event.path){</span>
+<span class="cstat-no" title="statement not covered" >                var filepath = path.relative(__dirname, event.path);</span>
+<span class="cstat-no" title="statement not covered" >                debug(info('file(s) changed: %s'), event.path);</span>
+<span class="cstat-no" title="statement not covered" >                lr.changed({body: {files: [filepath]}});</span>
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered">            return es.map(<span class="fstat-no" title="function not covered">function(file, done) {</span></span>
-<span class="cstat-no" title="statement not covered">                var filepath = path.relative(__dirname, file.path);</span>
-<span class="cstat-no" title="statement not covered">                debug(info('file(s) changed: %s'), filepath);</span>
-<span class="cstat-no" title="statement not covered">                lr.changed({body: {files: [filepath]}});</span>
-<span class="cstat-no" title="statement not covered">                done(null, file);</span>
+<span class="cstat-no" title="statement not covered" >            return es.map(<span class="fstat-no" title="function not covered" >function(file, done) {</span></span>
+<span class="cstat-no" title="statement not covered" >                var filepath = path.relative(__dirname, file.path);</span>
+<span class="cstat-no" title="statement not covered" >                debug(info('file(s) changed: %s'), filepath);</span>
+<span class="cstat-no" title="statement not covered" >                lr.changed({body: {files: [filepath]}});</span>
+<span class="cstat-no" title="statement not covered" >                done(null, file);</span>
             });
         }
     };
 })();
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 19:27:33 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 18:30:33 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
